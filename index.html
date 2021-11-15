@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Normalize file-->
+    <link rel="stylesheet" href="css/normalize.css"/>
+    
+    <!--font icon-->
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <!--Fnots-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!--Your main css file-->
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>AlMaysra</title>
+</head>
+
+
+<body>
+  <!--header-->
+   <div class="header">
+     <div class="container">
+       <div class="logo">
+         <img src="image/logo.png" alt="" />
+         <h3>الميسرة الأهلية</h3>
+       </div>
+       <div class="link">
+        <input type="checkbox" name="" id="check" value="" />
+         <div class="links">
+           <a href="#home">الصفحة الرئيسية</a>
+           <a href="#service">نبذة عنا</a>
+           <a href="#homework">التحاضير اليومية</a>
+           <a href="#students">درجات الإمتحانات</a>
+         </div>
+         <div class="links-icon">
+           <label for="check">
+             <span class="icon">
+               <span></span>
+               <span></span>
+               <span></span>
+             </span>
+           </label>
+         </div>
+       </div>
+       
+       
+     </div>
+   </div>
+  <!--end header-->
+  <!--start landing-->
+   <div class="landing" id="home">
+     <h1>مدارس الميسرة الأهلية</h1>
+     <p>الاختيار الافضل لتدريس اولادك مع كادر ممتاز ومتمرس</p>
+     <a href="#service">معلومات اكثر</a>
+     <img src="image/logo.png" alt="" />
+   </div>
+  <!--end landing-->
+  <!--start service-->
+   <div id="service" class="service">
+     <div class="container">
+       <div class="title">
+       <h1>خدماتنا</h1>
+       <p>هذه البعض من خدمات مدارس الميسرة الاهلية </p>
+     </div>
+     <div class="service-ins">
+       <div>
+         <i class="fas fa-paint-roller"></i>
+         <h1>GRAPHIC<br>
+         DESIGN</h1>
+         <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut
+         lacinia in, elementum id enim. Donec sollicitudin</p>
+       </div>
+       <div>
+         <i class="fas fa-paint-roller"></i>
+         <h1>GRAPHIC<br>
+         DESIGN</h1>
+         <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut
+         lacinia in, elementum id enim. Donec sollicitudin</p>
+       
+       </div>
+       <div>
+         <i class="fas fa-paint-roller"></i>
+         <h1>GRAPHIC<br>
+         DESIGN</h1>
+         <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut
+         lacinia in, elementum id enim. Donec sollicitudin</p>
+       
+       </div>
+       <div>
+         <i class="fas fa-paint-roller"></i>
+         <h1>GRAPHIC<br>
+         DESIGN</h1>
+         <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut
+         lacinia in, elementum id enim. Donec sollicitudin</p>
+       </div>
+     </div>
+   </div>
+  </div>
+  <!--end service-->
+
+ <!--Start homework-->
+ <div class="homework" id="homework">
+   <div class="container">
+    <div class="title">
+      <h1>التحاضير اليومية</h1>
+      <p>لمعرفة التحاضير اليومية يرجى اختيار المرحلة الدراسية للطالب</p>
+    </div>
+
+    <div class="homeworks">
+      <select id="educationalLevel2">
+        <option  disabled selected>المرحلة الدراسية</option>
+        <option>الابتدائية</option>
+        <option>الثانوية</option>
+      </select>
+
+      <select id="classroom2" oninput="level();" >
+        <option disabled selected>الصف</option>
+        <option>الاول</option>
+        <option>الثاني</option>
+        <option>الثالث</option>
+        <option>الرابع</option>
+        <option>الخامس</option>
+        <option>السادس</option>
+      </select>
+
+      <select id="branch2" style="display: none;">
+        <option disabled selected>الفرع</option>
+        <option>الاحيائي</option>
+        <option>التطبيقي</option>
+      </select>
+    </div>
+      <button type="button" onclick="homework(); ">عرض</button>
+
+      <textarea name="" id="textarea" cols="1" rows="20" disabled ></textarea>
+   </div>
+ </div>
+ <!--End homework-->
+
+  <!--start students-->
+  
+<div class="students" id="students">
+    <div class="container">
+      <div class="title">
+        <h1>درجات الطلبة</h1>
+        <p>الرجاء كتابة اسم الطالب بالشكل الصحيح وادخال المعلومات بالصورة الصحيحة وبالتسلسل</p>
+      </div>
+      <div class="search" >
+        <ul>
+          <input type="search" name="" id="userName" placeholder="اسم الطالب" />
+        </ul>
+      <div class="selection">
+        <div>
+          <select id="educationalLevel">
+            <option disabledn selected>المرحلة الدراسية</option>
+            <option>الابتدائية</option>
+            <option>الثانوية</option>
+          </select>
+        </div>
+        <div>
+    <select id="classroom" oninput="level();" >
+      <option disabled selected>الصف</option>
+      <option>الاول</option>
+      <option>الثاني</option>
+      <option>الثالث</option>
+      <option>الرابع</option>
+      <option>الخامس</option>
+      <option>السادس</option>
+    </select>
+    </div>
+    <div>
+      <select id="branch" style="display: none;">
+        <option disabled selected>الفرع</option>
+        <option>الاحيائي</option>
+        <option>التطبيقي</option>
+      </select>
+    </div>
+  </div>
+  
+  
+  <button type="button" onclick="serch(); levell();">البحث</button>
+  
+  <h3 id="header"></h3>
+  <div id="table">
+    <div>
+      <h4>المادة</h4>
+      
+      <span style="display:none;" id="esl">الاسلامية</span>
+      
+      <span style="display:none;" id="arb">العربية</span>
+      
+      <span style="display:none;" id="mat">الرياضيات</span>
+      
+      <span style="display:none;" id="eng">الانكليزية</span>
+
+      <span style="display:none;" id="elo">العلوم</span>      
+      
+      <span style="display:none;" id="ejtma">الاجتماعيات</span>
+
+      <span style="display:none;" id="phi">الفيزياء</span>
+
+      <span id="kms" style="display: none;">الكيمياء</span>
+      
+    </div>
+    <div class="nums">
+      <h4>الدرجة</h4>
+      
+      <span id="es"></span>
+      
+      <span id="ar"></span>
+     
+      <span id="elom"></span>
+      
+      <span id="math"></span>
+      
+      <span id="en"></span>
+      
+      <span id="ejt"></span>
+      
+      <span id="ph"></span>
+
+      <span id="km"></span>
+
+    </div>  
+  </div>
+
+
+      </div>
+    </div>
+  </div>
+    <!--end students-->
+  <!--start footer-->
+  <div class="footer">
+    <div class="container">
+      
+    </div>
+  </div>
+  <!--end footer-->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <script src="main.js"></script>
+</body>
+
+</html>
