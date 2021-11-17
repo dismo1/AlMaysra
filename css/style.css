@@ -125,6 +125,8 @@ body {
 .header .container .link .links a {
   padding: 5px;
   color: var(--main-color);
+  transition: 250ms;
+  border-radius: 5px;
   }
 
 
