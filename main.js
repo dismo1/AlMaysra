@@ -286,8 +286,8 @@ let branch = document.getElementById("branch").value;
     }
     if (level === 'الثالث') {
       switch (studentsNames.trim()) {
-        case '':
-           styleFn(userName.value, 0, 0, 0, 0, 0, 0, 0, 0)
+        case 'زيد رحمن':
+           styleFn(userName.value, 90, 50, 80, 80, 40, 90, 30, 70)
        break;
        default:
        document.getElementById('header').innerHTML = `عزيزي الطالب الاسم الذي قمت بكتابته <span style = 'color: red;'>"${userName.value}"</span> غير موجود يرجى التأكد من صحة الاسم`
