@@ -122,6 +122,110 @@ function homework() {
     
   }
 }
+
+
+function styleFn1(us, ...grades) {
+  document.getElementById('di').innerHTML =`${grades[0]}`;
+  document.getElementById('be').innerHTML =`${grades[1]}`;
+}
+
+function dictation() {
+  let level3 = document.getElementById("classroom3").value;
+  let educational3 = document.getElementById("educationalLevel3").value;
+  let branch3 = document.getElementById("branch3").value;
+  let studentsNames = document.getElementById("userName1").value;
+  let day = document.getElementById("day").value;
+
+  if (day === "2021/11/21") {
+    if (educational3 === "الابتدائية") {
+      if (level3 === "الاول") {
+        switch (studentsNames.trim()) {
+          case 'محمد حسين':
+             styleFn1(userName1.value, 10, 'جيد')
+         break;
+         default:
+         document.getElementById('headerd').innerHTML = `عزيزي الطالب الاسم الذي قمت بكتابته <span style = 'color: red;'>"${userName1.value}"</span> غير موجود يرجى التأكد من صحة الاسم`
+        }
+      }
+      if (level3 === "الثاني") {
+        switch (studentsNames.trim()) {
+          case '':
+             styleFn1(userName1.value, 0, '')
+         break;
+         default:
+         document.getElementById('headerd').innerHTML = `عزيزي الطالب الاسم الذي قمت بكتابته <span style = 'color: red;'>"${userName1.value}"</span> غير موجود يرجى التأكد من صحة الاسم`
+        }
+      }
+      if (level3 === "الثالث") {
+        switch (studentsNames.trim()) {
+          case '':
+             styleFn1(userName1.value, 0, '')
+         break;
+         default:
+         document.getElementById('headerd').innerHTML = `عزيزي الطالب الاسم الذي قمت بكتابته <span style = 'color: red;'>"${userName1.value}"</span> غير موجود يرجى التأكد من صحة الاسم`
+        }
+      }
+      if (level3 === "الرابع") {
+        switch (studentsNames.trim()) {
+          case '':
+             styleFn1(userName1.value, 0, '')
+         break;
+         default:
+         document.getElementById('headerd').innerHTML = `عزيزي الطالب الاسم الذي قمت بكتابته <span style = 'color: red;'>"${userName1.value}"</span> غير موجود يرجى التأكد من صحة الاسم`
+        }
+      }
+      if (level3 === "الخامس") {
+        switch (studentsNames.trim()) {
+          case '':
+             styleFn1(userName1.value, 0, '')
+         break;
+         default:
+         document.getElementById('headerd').innerHTML = `عزيزي الطالب الاسم الذي قمت بكتابته <span style = 'color: red;'>"${userName1.value}"</span> غير موجود يرجى التأكد من صحة الاسم`
+        }
+      }
+      if (level3 === "السادس") {
+        switch (studentsNames.trim()) {
+          case '':
+             styleFn1(userName1.value, 10, '')
+         break;
+         default:
+         document.getElementById('headerd').innerHTML = `عزيزي الطالب الاسم الذي قمت بكتابته <span style = 'color: red;'>"${userName1.value}"</span> غير موجود يرجى التأكد من صحة الاسم`
+        }
+      }
+    } 
+    if (educational3 === "الثانوية") {
+      if (level3 === "الاول") {
+  
+      }
+      if (level3 === "الثاني") {
+        
+      }
+      if (level3 === "الثالث") {
+        
+      }
+      if (level3 === "الرابع") {
+        
+      }
+      if (level3 === "الخامس") {
+        if (branch3 === "الاحيائي") {
+  
+        }
+        if (branch3 === "التطبيقي") {
+          
+        }
+      }
+      if (level3 === "السادس") {
+        if (branch3 === "الاحيائي") {
+  
+        }
+        if (branch3 === "التطبيقي") {
+          
+        }
+      }
+    }
+    
+  }
+}
   
   function styleFn(us, ...grades) {
   document.getElementById('es').innerHTML =`${grades[0]}`;
@@ -137,10 +241,13 @@ function homework() {
 function level() {
 let level = document.getElementById("classroom").value;
 let level2 = document.getElementById("classroom2").value;
+let level3 = document.getElementById("classroom3").value;
 let educational = document.getElementById("educationalLevel").value;
 let educational2 = document.getElementById("educationalLevel2").value;
+let educational3 = document.getElementById("educationalLevel3").value;
 let branch = document.getElementById("branch").value;
 let branch2 = document.getElementById("branch2").value;
+let branch3 = document.getElementById("branch3").value;
 
 if (level === 'الخامس' && educational === "الثانوية"  || level === 'السادس' && educational === "الثانوية" ) {
   document.getElementById('branch').style['display'] = "block";
@@ -153,6 +260,12 @@ if (level2 === 'الخامس' && educational2 === "الثانوية"  || level2 
 }
 else {
   document.getElementById('branch2').style['display'] = "none";
+}
+if (level3 === 'الخامس' && educational3 === "الثانوية"  || level3 === 'السادس' && educational3 === "الثانوية" ) {
+  document.getElementById('branch3').style['display'] = "block";
+}
+else {
+  document.getElementById('branch3').style['display'] = "none";
 }
 }
 

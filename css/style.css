@@ -18,6 +18,7 @@ html {
   --secondary-color: #f4f4f4;
   --third-color: #1a1a1a;
   --fourth-color: #eeeeee;
+  --background: #f5f5f5;
   --dtrans: 1000ms;
 }
 
@@ -348,7 +349,7 @@ body {
  .service {
    position: relative;
    width: 100%;
-   background: #f5f5f5;
+   background: var(--background);
    padding: 50px 0;
  }
  
@@ -402,6 +403,9 @@ body {
  }
 /*end service*/
 /*Start homework*/
+.homework {
+  padding: 50px 0;
+}
 .homework .container {
   display: grid;
   justify-content: center;
@@ -444,10 +448,97 @@ body {
   justify-self: center;
 }
 /*End homework*/
+
+/*Start dictation*/
+.dictation {
+  background-color: var(--background);
+  padding: 50px 0;
+}
+
+.dictation .container {
+  display: grid;
+  justify-content: center;
+}
+
+
+.dictation .inputs {
+  text-align: center;
+  display: grid;
+  justify-self: center;
+  width: 100%;
+}
+
+.dictation .inputs ul {
+  display: grid;
+}
+
+.dictation .inputs ul input {
+  outline: none;
+  border: none;
+  background: var(--third-color);
+  color: var(--secondary-color);
+  height: 30px;
+  padding: 5px;
+}
+
+.dictation .inputs ul input::placeholder {
+  color: var(--secondary-color);
+}
+
+.dictation .selections {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 10px;
+  margin-top: 15px;
+}
+
+.dictation .selections select{
+  outline: none;
+  border: none;
+  background: var(--third-color);
+  padding: 5px;
+  color: var(--secondary-color);
+}
+
+
+.dictation .container #table {
+  background: var(--fourth-color);
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 15px;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+.dictation .container #table div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+@media (max-width: 767px) {
+  .dictation .container {
+    grid-template-columns: 100%;
+  }
+
+  .dictation .container #table {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dictation .container #table div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 15px;
+    height: 20px;
+  }
+}
+/*End dictation*/
+
+
 /* Start students */
 .students {
-  padding: 100px 0;
-  margin-top: 100px;
+  padding: 50px 0;
 }
 
 .students .container {
@@ -455,30 +546,19 @@ body {
   justify-content: center;
 }
 
-.students .container .search {
+.students .search,
+.reslut {
   text-align: center;
   display: grid;
   justify-self: center;
-  width: 75%;
 }
 
-
-.students .container .search .title {
-  top: -80px;
-}
-
-.students .container .search p {
-  font-size: 10px;
-  margin-top: 10px;
-}
-
-.students .container .search ul {
+.students .search ul {
   display: grid;
-  grid-template-columns: 100%;
-  margin-top: 25px;
+
 }
 
-.students .container .search ul input {
+.students .search ul input {
   outline: none;
   border: none;
   background: var(--fourth-color);
@@ -486,7 +566,8 @@ body {
   padding: 5px;
 }
 
-.students .container .search button {
+.students .container .search button,
+.dictation button {
   background: var(--main-color);
   padding: 10px;
   font-size: 12px;
@@ -498,22 +579,26 @@ body {
   justify-self: center;
 }
 
-.students .container .search .selection {
+.dictation button {
+  color: var(--secondary-color);
+  background: var(--third-color);
+}
+
+.students .selection {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   margin-top: 15px;
 }
 
-.students .container .search .selection select {
-  width: 100%;
+.students .selection select {
   outline: none;
   border: none;
   background: var(--fourth-color);
   padding: 5px;
 }
 
-.students .container .search #table {
+.students .container #table {
   background: var(--fourth-color);
   display: grid;
   grid-template-rows: repeat(2, 1fr);
@@ -522,11 +607,13 @@ body {
   margin-top: 25px;
 }
 
-#header {
+#header,
+#headerd {
   margin-top: 25px;
+  text-align: center;
 }
 
-.students .container .search #table div {
+.students .container #table div {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-gap: 10px;
@@ -536,11 +623,11 @@ body {
 
 
 @media (max-width: 767px) {
-  .students .container .search #table {
+  .students .container #table {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .students .container .search #table div {
+  .students .container #table div {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(9, 1fr);

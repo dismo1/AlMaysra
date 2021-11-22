@@ -141,97 +141,154 @@
  </div>
  <!--End homework-->
 
+ <!--Start dictation-->
+<div class="dictation">
+  <div class="container">
+    <div class="title">
+      <h1>الإمتحانات اليومية</h1>
+      <p>هنا يتم عرض درجات الإمتحانات اليومية والأملاء</p>
+    </div>
+    <div class="inputs">
+      <ul>
+        <input type="text" placeholder="اسم الطالب" id="userName1">
+      </ul>
+      <div class="selections">
+        <select id="educationalLevel3">
+          <option  disabled selected>المرحلة الدراسية</option>
+          <option>الابتدائية</option>
+          <option>الثانوية</option>
+        </select>
+
+        <select id="classroom3" oninput="level();" >
+          <option disabled selected>الصف</option>
+          <option>الاول</option>
+          <option>الثاني</option>
+          <option>الثالث</option>
+          <option>الرابع</option>
+          <option>الخامس</option>
+          <option>السادس</option>
+        </select>
+
+        <select id="branch3" style="display: none;">
+          <option disabled selected>الفرع</option>
+          <option>الاحيائي</option>
+          <option>التطبيقي</option>
+        </select>
+
+        <select id="day">
+          <option disabled selected>اليوم</option>
+          <option>2021/11/21</option>
+        </select>
+      </div>
+      <button type="button" onclick="dictation();">البحث</button>
+    </div>
+    <h3 id="headerd"></h3>
+
+    <div id="table">
+      <div>
+        <span>الإملاء</span>
+        <span>السلوك</span>
+      </div>
+      <div id="nums">
+        <span id="di"></span>
+        <span id="be"></span>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+ <!--End dictation-->
+
   <!--start students-->
   
 <div class="students" id="students">
-    <div class="container">
-      <div class="title">
-        <h1>درجات الطلبة</h1>
-        <p>الرجاء كتابة اسم الطالب بالشكل الصحيح وادخال المعلومات بالصورة الصحيحة وبالتسلسل</p>
-      </div>
-      <div class="search" >
-        <ul>
-          <input type="search" name="" id="userName" placeholder="اسم الطالب" />
-        </ul>
+  <div class="container">
+    <div class="title">
+      <h1>درجات الطلبة</h1>
+      <p>الرجاء كتابة اسم الطالب بالشكل الصحيح وادخال المعلومات بالصورة الصحيحة وبالتسلسل</p>
+    </div>
+    <div class="search" >
+      <ul>
+        <input type="search" name="" id="userName" placeholder="اسم الطالب" />
+      </ul>
       <div class="selection">
-        <div>
-          <select id="educationalLevel">
-            <option disabledn selected>المرحلة الدراسية</option>
-            <option>الابتدائية</option>
-            <option>الثانوية</option>
-          </select>
-        </div>
-        <div>
-    <select id="classroom" oninput="level();" >
-      <option disabled selected>الصف</option>
-      <option>الاول</option>
-      <option>الثاني</option>
-      <option>الثالث</option>
-      <option>الرابع</option>
-      <option>الخامس</option>
-      <option>السادس</option>
-    </select>
-    </div>
-    <div>
-      <select id="branch" style="display: none;">
-        <option disabled selected>الفرع</option>
-        <option>الاحيائي</option>
-        <option>التطبيقي</option>
-      </select>
-    </div>
-  </div>
-  
-  
-  <button type="button" onclick="serch(); levell();">البحث</button>
-  
-  <h3 id="header"></h3>
-  <div id="table">
-    <div>
-      <h4>المادة</h4>
-      
-      <span style="display:none;" id="esl">الاسلامية</span>
-      
-      <span style="display:none;" id="arb">العربية</span>
-      
-      <span style="display:none;" id="mat">الرياضيات</span>
-      
-      <span style="display:none;" id="eng">الانكليزية</span>
+        <select id="educationalLevel">
+          <option disabledn selected>المرحلة الدراسية</option>
+          <option>الابتدائية</option>
+          <option>الثانوية</option>
+        </select>
 
-      <span style="display:none;" id="elo">العلوم</span>      
-      
-      <span style="display:none;" id="ejtma">الاجتماعيات</span>
+        <select id="classroom" oninput="level();" >
+          <option disabled selected>الصف</option>
+          <option>الاول</option>
+          <option>الثاني</option>
+          <option>الثالث</option>
+          <option>الرابع</option>
+          <option>الخامس</option>
+          <option>السادس</option>
+        </select>
 
-      <span style="display:none;" id="phi">الفيزياء</span>
-
-      <span id="kms" style="display: none;">الكيمياء</span>
-      
-    </div>
-    <div class="nums">
-      <h4>الدرجة</h4>
-      
-      <span id="es"></span>
-      
-      <span id="ar"></span>
-     
-      <span id="elom"></span>
-      
-      <span id="math"></span>
-      
-      <span id="en"></span>
-      
-      <span id="ejt"></span>
-      
-      <span id="ph"></span>
-
-      <span id="km"></span>
-
-    </div>  
-  </div>
-
-
+        <select id="branch" style="display: none;">
+          <option disabled selected>الفرع</option>
+          <option>الاحيائي</option>
+          <option>التطبيقي</option>
+        </select>
       </div>
+      <button type="button" onclick="serch(); levell();">البحث</button>
+
     </div>
+
+    
+    <div class="reslut">
+      <h3 id="header"></h3>
+    <div id="table">
+      <div>
+        <h4>المادة</h4>
+        
+        <span style="display:none;" id="esl">الاسلامية</span>
+        
+        <span style="display:none;" id="arb">العربية</span>
+        
+        <span style="display:none;" id="mat">الرياضيات</span>
+        
+        <span style="display:none;" id="eng">الانكليزية</span>
+  
+        <span style="display:none;" id="elo">العلوم</span>      
+        
+        <span style="display:none;" id="ejtma">الاجتماعيات</span>
+  
+        <span style="display:none;" id="phi">الفيزياء</span>
+  
+        <span id="kms" style="display: none;">الكيمياء</span>
+        
+      </div>
+      <div class="nums">
+        <h4>الدرجة</h4>
+        
+        <span id="es"></span>
+        
+        <span id="ar"></span>
+       
+        <span id="elom"></span>
+        
+        <span id="math"></span>
+        
+        <span id="en"></span>
+        
+        <span id="ejt"></span>
+        
+        <span id="ph"></span>
+  
+        <span id="km"></span>
+  
+      </div>  
+    </div>
+    </div>
+  
+    
   </div>
+</div>
     <!--end students-->
   <!--start footer-->
   <div class="footer">
